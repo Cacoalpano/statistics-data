@@ -1,0 +1,29 @@
+import { NgModule, ModuleWithProviders } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ShareModule } from '../@share/share.module';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LoadingComponent } from './components/loading/loading.component';
+import { MainLayoutComponent } from './layouts/main/main.layout';
+import { MenuComponent } from './components/menu/menu.component';
+import { TranslateModule } from '@ngx-translate/core';
+
+const BASE_MODULES = [CommonModule, FormsModule, TranslateModule, ReactiveFormsModule, RouterModule, ShareModule];
+const THEME_MODULES = [];
+const COMPONENTS = [HeaderComponent, FooterComponent, LoadingComponent, MainLayoutComponent, MenuComponent];
+const PIPES = [];
+@NgModule({
+  declarations: [...COMPONENTS, ...PIPES],
+  imports: [...BASE_MODULES, ...THEME_MODULES],
+  exports: [...BASE_MODULES, ...THEME_MODULES, ...COMPONENTS, ...PIPES],
+})
+export class ThemeModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: ThemeModule,
+      providers: [],
+    };
+  }
+}
