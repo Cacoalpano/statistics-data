@@ -92,7 +92,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              { "input": "./node_modules/bootstrap/dist/css/bootstrap.min.css" },
+              { "input": "./node_modules/font-awesome/css/font-awesome.css" },
+              { "input": "./node_modules/chart.js/dist/Chart.min.css" },
+              { "input": "./node_modules/@ng-select/ng-select/themes/default.theme.css" },
+              { "input": "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css" },
+              { "input": "./node_modules/ngx-toastr/toastr.css" },
+              { "input": "src/app/@theme/styles/styles.scss" }
             ],
             "scripts": []
           }
