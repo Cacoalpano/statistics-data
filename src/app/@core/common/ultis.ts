@@ -6,13 +6,13 @@ export function isRealValue(value: string | number | object): boolean {
     return value && value.trim() === '';
   }
   if (typeof value === 'number') {
-    return (value == 0) || !isNaN(value);
+    return (value === 0) || !isNaN(value);
   }
-  if (typeof value === "object") {
+  if (typeof value === 'object') {
     if (!isArray(value)) {
       return value !== null || value !== undefined;
     }
-    else return isArrayHasValue(value);
+    return isArrayHasValue(value);
   }
 }
 
