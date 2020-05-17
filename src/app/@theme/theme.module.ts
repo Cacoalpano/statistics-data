@@ -9,9 +9,11 @@ import { LoadingComponent } from './components/loading/loading.component';
 import { MainLayoutComponent } from './layouts/main/main.layout';
 import { MenuComponent } from './components/menu/menu.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 const BASE_MODULES = [CommonModule, FormsModule, TranslateModule, ReactiveFormsModule, RouterModule, ShareModule];
-const THEME_MODULES = [];
+const THEME_MODULES = [BsDropdownModule.forRoot(), CollapseModule.forRoot()];
 const COMPONENTS = [HeaderComponent, FooterComponent, LoadingComponent, MainLayoutComponent, MenuComponent];
 const PIPES = [];
 @NgModule({

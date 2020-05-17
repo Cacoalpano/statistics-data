@@ -14,7 +14,7 @@ export class AppInterceptor implements HttpInterceptor {
     private readonly router: Router,
     private readonly loadingService: LoadingService,
     private readonly messageService: MessageService,
-  ) {}
+  ) { }
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     let requestOptions: RequestOptions;
     req.params instanceof InterceptorHttpParams ? (requestOptions = req.params.options) : (requestOptions = {});
